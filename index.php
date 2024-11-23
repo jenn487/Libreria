@@ -1,137 +1,141 @@
-<?php 
-   include ('conectar/conexion.php'); 
+<?php
+   include ('conectar/conexion.php');
 ?>
 
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Libreria Jenn</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-<body class="is-preload">
+<!DOCTYPE html>
+<html lang="es">
 
-<!-- Header -->
-<div id="header">
-    <div class="top">
-        <div id="logo">
-            <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-            <h1 id="title">Libreria Jenn</h1>
-            <p>Bienvenido a nuestra librería</p>
-        </div>
-        <nav id="nav">
-            <ul>
-                <li><a href="#top" id="top-link"><span class="icon solid fa-home">Inicio</span></a></li>
-                <li><a href="#books" id="books-link"><span class="icon solid fa-book">Libros</span></a></li>
-                <li><a href="#authors" id="authors-link"><span class="icon solid fa-user">Autores</span></a></li>
-                <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contacto</span></a></li>
-            </ul>
-        </nav>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Libreria Web</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-</div>
+  </div>
+  <!-- ***** Preloader End ***** -->
 
-<!-- Main -->
-<div id="main">
-    <!-- Intro -->
-    <section id="top" class="one dark cover">
-        <div class="container">
-            <header>
-                <h2 class="alt">Bienvenido a <strong>Libreria Jenn</strong></h2>
-                <p>Explora nuestra colección de libros y autores.</p>
-            </header>
-            <footer>
-                <a href="#books" class="button scrolly">Ver Libros</a>
-            </footer>
-        </div>
-    </section>
-
-    <!-- Libros -->
-    <section id="books" class="two">
-        <div class="container">
-            <header>
-                <h2>Libros Disponibles</h2>
-            </header>
-            <table>
-                <tr>
-                    <th>ID Titulo</th>
-                    <th>Titulo</th>
-                    <th>ID Publicador</th>
-                </tr>
-                <?php
-                $stmt = $pdo->query("SELECT id_titulo, titulo, id_pub FROM titulos");
-                while ($row = $stmt->fetch()) {
-                    echo "<tr>
-                            <td>{$row['id_titulo']}</td>
-                            <td>{$row['titulo']}</td>
-                            <td>{$row['id_pub']}</td>
-                          </tr>";
-                }
-                ?>
-            </table>
-        </div>
-    </section>
-
-    <!-- Autores -->
-    <section id="authors" class="three">
-        <div class="container">
-            <header>
-                <h2>Autores Disponibles</h2>
-            </header>
-            <table>
-                <tr>
-                    <th>ID Autor</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                </tr>
-                <?php
-                $stmt = $pdo->query("SELECT id_autor, nombre, apellido FROM autores");
-                while ($row = $stmt->fetch()) {
-                    echo "<tr>
-                            <td>{$row['id_autor']}</td>
-                            <td>{$row['nombre']}</td>
-                            <td>{$row['apellido']}</td>
-                          </tr>";
-                }
-                ?>
-            </table>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contact" class="four">
-        <div class="container">
-            <header>
-                <h2>Contacto</h2>
-            </header>
-            <p>Si tienes alguna pregunta, no dudes en contactarnos.</p>
-            <form method=" post" action="enviar_contacto.php">
-                <div class="field">
-                    <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" required />
-                </div>
-                <div class="field">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" name="email" id="email" required />
-                </div>
-                <div class="field">
-                    <label for="message">Mensaje</label>
-                    <textarea name="message" id="message" required></textarea>
-                </div>
-                <div class="field">
-                    <input type="submit" value="Enviar Mensaje" />
-                </div>
-            </form>
-        </div>
-    </section>
-</div>
-
-<!-- Footer -->
-<div id="footer">
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
     <div class="container">
-        <p>&copy; 2023 Libreria Jenn. Todos los derechos reservados.</p>
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.php" class="logo">
+                    <h4>LIBRERIA WEB</h4>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Search End ***** -->
+                    
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="libros.php">Libros</a></li>
+                        <li><a href="autores.php">Autores</a></li>
+                        <li><a href="contacto.php" class="active">Contacto<img src="assets/images/libros.jpeg" alt=""></a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
     </div>
-</div>
+  </header>
+  <!-- ***** Header Area End ***** -->
 
-</body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+          <!-- ***** Banner Start ***** -->
+          <div class="main-banner">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="header-text">
+                  <h6>Bienvenido a la libreria Web</h6>
+                  <h4><em>Gran variedad de </em>libros</h4>
+                  <div class="main-button">
+                    <a href="libros.php">Echar un vistazo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Banner End ***** -->
+
+          <!-- ***** Most Popular Start ***** -->
+
+          <!-- ***** Most Popular End ***** -->
+
+          <!-- ***** Gaming Library Start ***** -->
+          
+          <!-- ***** Gaming Library End ***** -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2024 <a href="#">Jennifer Cristina</a> matricula 2023-1411. 
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+
+  </body>
+
 </html>

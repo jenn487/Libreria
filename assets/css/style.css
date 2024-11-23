@@ -1,0 +1,145 @@
+/* Estilo de contenedor principal */
+.library-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Encabezado */
+.heading-section h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada elemento (libro) */
+.item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista dentro del elemento */
+.item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Imagen del libro */
+.item ul li img {
+    width: 100px;
+    height: 100px;
+    object-fit: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Títulos y textos */
+.item ul li h4 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin: 2px 0;
+    color: #333;
+    
+}
+
+.item ul li span {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    margin-left: 2px ;
+}
+
+/* Botones */
+.main-border-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #6a0dad;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-border-button a:hover {
+    background-color: #4e0b9c;
+}
+
+/* Última tarjeta con estilo especial */
+.item.last-item {
+    border-color: #6a0dad;
+}
+
+/*FORMULARIO*/
+
+.form-contacto {
+    margin-top: 100px;
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-contacto .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-contacto label {
+    color: #ffffff;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-contacto input,
+  .form-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .form-contacto input:focus,
+  .form-contacto textarea:focus {
+    border-color: #6c63ff;
+    outline: none;
+  }
+  
+  .main-border-button button {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .main-border-button button:hover {
+    background-color: #5a53d0;
+  }
+
+  .form-contacto .comentario-caja {
+    width: 100%; 
+    max-width: 600px; 
+    min-width: 300px;
+    height: 100px; 
+    resize: none; 
+    background: #2a2a2a; 
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  
