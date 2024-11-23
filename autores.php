@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+   
   </head>
 
 <body>
@@ -74,18 +75,19 @@
               </div>
               <?php
                 try {
-                    $query = "SELECT * FROM autores";
+                    $query = "SELECT autores.nombre, biografias.biografia 
+                              FROM autores 
+                              JOIN biografias ON autores.id_autor = biografias.id_autor";
                     $stmt = $pdo->query($query);
 
                     if ($stmt->rowCount() > 0):
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
-                            <div class="item">
-                                <ul>
-                                    <li><img src="assets/images/libreria.jpeg" alt="" class="templatemo-item"></li>
-                                    <li><h4>Nombre: <?php echo htmlspecialchars($row['nombre']); ?></h4></li>
-                                    <li><h4>Ciudad: <?php echo htmlspecialchars($row['ciudad']); ?></h4></li>
-                                </ul>
-                            </div>
+                            <div class="item"> <img src="assets/images/libreria.jpeg" alt="" 
+                            class="templatemo-item"> 
+                            <div> <h5>Nombre: <?php echo htmlspecialchars($row['nombre']); ?></h5> 
+                            <p>Biografía: <?php echo htmlspecialchars($row['biografia']); ?></p> 
+                          </div> 
+                        </div>
                         <?php endwhile;
                     else: ?>
                         <p>No se encontraron registros.</p>

@@ -35,16 +35,15 @@ https://templatemo.com/tm-579-cyborg-gaming
 <body>
 
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
+  <div id="js-preloader" class="js-preloader"> 
+    <div class="preloader-inner"> <span class="dot"></span> 
+    <div class="dots"> 
+      <span></span> 
+      <span></span> 
+      <span></span> 
+    </div> 
+  </div> 
+</div>
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
@@ -139,17 +138,19 @@ https://templatemo.com/tm-579-cyborg-gaming
   </footer>
 
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
-
+  <!-- Scripts --> 
+   <!-- Bootstrap core JavaScript --> 
+    <script src="vendor/jquery/jquery.min.js"></script> 
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="assets/js/isotope.min.js"></script> 
+    <script src="assets/js/owl-carousel.js"></script> 
+    <script src="assets/js/tabs.js"></script> 
+    <script src="assets/js/popup.js"></script> 
+    <script src="assets/js/custom.js"></script> 
+    <script>  
+      window.addEventListener('load', function() 
+      { document.getElementById('js-preloader').style.display = 'none'; }); 
+    </script>
 
   </body>
 

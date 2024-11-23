@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$db = 'dblibreria'; 
-$user = 'root'; 
-$pass = ''; 
+$host = 'sql208.infinityfree.com';
+$db = 'if0_37771138_dblibreria'; 
+$user = 'if0_37771138'; 
+$pass = 'V685AQyiAlG'; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
@@ -14,7 +14,8 @@ try {
 
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+{
     $nombre = htmlspecialchars($_POST['nombre']);
     $correo = htmlspecialchars($_POST['correo']);
     $asunto = htmlspecialchars($_POST['asunto']);
